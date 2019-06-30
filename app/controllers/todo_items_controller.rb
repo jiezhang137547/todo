@@ -7,9 +7,9 @@ def create
  redirect_to @todo_list
 end
 
-def destory
+def destroy
 	@todo_item = @todo_list.todo_items.find(params[:id])
-	if @todo_item.destory
+	if @todo_item.destroy
 		flash[:success] = "Todo List item was deleted."
 	else
 		flash[:error] = "Todo List item could not be deleted."
